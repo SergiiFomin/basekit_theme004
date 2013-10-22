@@ -614,7 +614,7 @@ h1{
 
 h2{
   font: bold 30px/50px Trebuchet MS, sans-serif;
-  color: @color-swatch1;
+  color: @color-swatch2;
   text-transform: uppercase;
   &.name{
     font-size: 30px;
@@ -655,8 +655,41 @@ figure.fleft{
   margin-right: 20px;
 }
 
-#center{
+div[id$="center"]{
   text-align: center;
+}
+
+div[id$="image-left"]{
+  float: left;
+  margin-right: 28px;
+}
+
+.widget{
+  &.image{
+    display: block;
+    margin-bottom: 20px;
+    a{
+      display: block;
+    }
+    span.image-img{
+      display: block;
+      .box-sizing(border-box);
+      position: relative;
+      &:before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border: 10px solid rgba(255, 255, 255, .27);
+      }
+      img{
+        .box-sizing(border-box);
+      }
+    }
+  }
 }
 
 hr{
@@ -772,17 +805,6 @@ footer{
 }
 
 /*--- footer end ------*/
-
-div[id$="res"]{
-  font: 33px/34px Georgia, serif;
-  color: @color-swatch3;
-  span{
-    color: @color-swatch1;
-  }  
-  .bk-content-text{
-    padding-bottom: 20px;
-  }
-}
 
 .copyright{
   color: @color-swatch2;
