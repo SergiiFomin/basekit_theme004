@@ -1,0 +1,152 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="bg-glow">
+
+    <!--header-->
+    <header>
+        <div class="header">
+            <div class="container">
+                <div class=row>
+                    <article class="span6">
+                        <h1 class="brand">
+                            {{widget('companyheader', 'companyheader', {"defaultlogo": asset('/images/logo.png')})|raw}}
+                        </h1>
+                    </article>
+                    <article class="span6">
+                        <div class="nav-collapse nav-collapse_ collapse">
+                            {{widget('navigation', 'navigation', {'align': 'left'})|raw}}
+                        </div>
+                    </article>
+                </div>
+                <div class="row">
+                    <article class="span12">
+                        {{widget('responsiveslideshow', 'responsiveslideshow', {'duration':'3', 'transSpeed': '1000', 'transType': 'fade', 'showButtons': true, 'showBullets': false, 'allowPause': false, 'allowLoop': false, 'images':[{'imageHeight':'470', 'imageWidth':'1170', 'url':'http://placehold.it/1170x470', 'title':'test title', 'description': 'test desc'},{'imageHeight':'470', 'imageWidth':'1170', 'url':'http://placehold.it/1170x470', 'title':'test title', 'description': 'test desc'},{'imageHeight':'470', 'imageWidth':'1170', 'url':'http://placehold.it/1170x470', 'title':'test title', 'description': 'test desc'},{'imageHeight':'470', 'imageWidth':'1170', 'url':'http://placehold.it/1170x470', 'title':'test title', 'description': 'test desc'}]})|raw}}
+                        {{widget('space', 'space', {'height': '30'})|raw}}
+                    </article>
+                </div>
+                <div class="row">
+                    <article class="span1"></article>
+                    <article class="span10">
+                        {{widget('content', 'center', {content: '<h1>Best Roles</h1>', lines: 'all'})|raw}}
+                        {{widget('content', 'center', {content: '<h3>Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes.</h3>', lines: 'all'})|raw}}
+                    </article>
+                    <article class="span1"></article>
+                </div>
+                <div class="row">
+                    <article class="span12">
+                        <div class="row">
+                            <article class="span3">
+                                <div class="img-block">
+                                    {{widget('image', 'img1', { 'src': asset('images/page1-img1.jpg'), 'fileSize': '580kb', 'imageSize': '340 x 270', 'imageWidth': '270px'})|raw}}
+                                    {{widget('content', 'content', {content: '<h2>FILMs</h2>', lines: 'all'})|raw}}
+                                    {{widget('content', 'text', {content: '<p>Praesent vestibulum molestie</p>', lines: 'all'})|raw}}
+                                    {{widget('button', 'button', {italic: false, text:'Read More', 'align':'widget-align-center'})|raw}}
+                                </div>
+                            </article>
+                            <article class="span3">
+                                <div class="img-block">
+                                    {{widget('image', 'img2', { 'src': asset('images/page1-img2.jpg'), 'fileSize': '580kb', 'imageSize': '340 x 270', 'imageWidth': '270px'})|raw}}
+                                    {{widget('content', 'content', {content: '<h2>Theater</h2>', lines: 'all'})|raw}}
+                                    {{widget('content', 'text', {content: '<p>Praesent vestibulum molestie</p>', lines: 'all'})|raw}}
+                                    {{widget('button', 'button', {italic: false, text:'Read More', 'align':'widget-align-center'})|raw}}
+                                </div>
+                            </article>
+                            <article class="span3">
+                                <div class="img-block">
+                                    {{widget('image', 'img3', { 'src': asset('images/page1-img3.jpg'), 'fileSize': '580kb', 'imageSize': '340 x 270', 'imageWidth': '270px'})|raw}}
+                                    {{widget('content', 'content', {content: '<h2>Commercial</h2>', lines: 'all'})|raw}}
+                                    {{widget('content', 'text', {content: '<p>Praesent vestibulum molestie</p>', lines: 'all'})|raw}}
+                                    {{widget('button', 'button', {italic: false, text:'Read More', 'align':'widget-align-center'})|raw}}
+                                </div>
+                            </article>
+                            <article class="span3">
+                                <div class="img-block">
+                                    {{widget('image', 'img4', { 'src': asset('images/page1-img4.jpg'), 'fileSize': '580kb', 'imageSize': '340 x 270', 'imageWidth': '270px'})|raw}}
+                                    {{widget('content', 'content', {content: '<h2>Staged Reading</h2>', lines: 'all'})|raw}}
+                                    {{widget('content', 'text', {content: '<p>Praesent vestibulum molestie</p>', lines: 'all'})|raw}}
+                                    {{widget('button', 'button', {italic: false, text:'Read More', 'align':'widget-align-center'})|raw}}
+                                </div>
+                            </article>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="global">
+        <div class="container divider3">
+            <div class="row">
+                <section class="span12">
+                    <div class="row">
+                        <article class="span8">
+                            {{widget('image', 'left', { 'src': asset('images/page1-img5.jpg'), 'fileSize': '30kb', 'imageSize': '269 x 400', 'imageWidth': '269px'})|raw}}
+                            <div class="wrapper">
+                                {{widget('content', 'name', {content: '<h2>Hello! i am <span>Devid Paterson</span></h2>', lines: 'all'})|raw}}
+                                {{widget('content', 'color', {content: '<h3>Praesent vestibulum molestie. Aenean nonummy henit mauris. Phasellus porta. Fusce suscipit varius mi cum sociis natoque penatibus</h3>', lines: 'all'})|raw}}
+                                {{widget('content', 'text', {content: '<p>Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem.</p><p>Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsum dolor sit amet.</p>', lines: 'all'})|raw}}
+                                {{widget('button', 'button', {italic: false, text:'more about me', 'align':'widget-align-left'})|raw}}
+                            </div>
+                        </article>
+                        <article class="span1"></article>
+                        <article class="span3">
+                            {{widget('content', 'content', {content: '<blockquote><p>Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris Phasel.</p></blockquote><p><strong>Jessica Priston, </strong> USA</p><blockquote><p>Vstibulum clee lacusan nonmmy hendrerit mauris.</p></blockquote><p><strong>Timothy Smith, </strong> USA</p>', lines: 'all'})|raw}}
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!--content-->
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <article class="span12">
+                        {{zone('main')|raw}}
+                        {{widget('content', 'content', {content: '<h2>my awards</h2>', lines: 'all'})|raw}}
+                        {{widget('line', 'line', {'thickness': 'inherit', 'padding': 'inherit', 'length':'inherit', 'align': 'center'})|raw}}
+                        <ul class="ma">
+                            <li>{{widget('image', 'image', { 'src': asset('images/awards/page1_logo1.png')})|raw}}</li>
+                            <li>{{widget('image', 'image', { 'src': asset('images/awards/page1_logo2.png')})|raw}}</li>
+                            <li>{{widget('image', 'image', { 'src': asset('images/awards/page1_logo3.png')})|raw}}</li>
+                            <li>{{widget('image', 'image', { 'src': asset('images/awards/page1_logo4.png')})|raw}}</li>
+                            <li>{{widget('image', 'image', { 'src': asset('images/awards/page1_logo5.png')})|raw}}</li>
+                            <li>{{widget('image', 'image', { 'src': asset('images/awards/page1_logo6.png')})|raw}}</li>
+                            <li>{{widget('image', 'image', { 'src': asset('images/awards/page1_logo7.png')})|raw}}</li>
+                        </ul>
+                        {{widget('line', 'line', {'thickness': 'inherit', 'padding': 'inherit', 'length':'inherit', 'align': 'center'})|raw}}
+                    </article>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <!--footer-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <section class="span12">
+                    <div class="row">
+                        <article class="span12">
+                            <h1 class="brand">
+                                {{widget('companyheader', 'companyheader', {"defaultlogo": asset('/images/logo.png')})|raw}}
+                            </h1>
+                            {{widget('content', 'copyright_copy', {content: '&copy; &nbsp;2013&nbsp; |&nbsp; All Rights Reserved &nbsp;|', lines: 'all'})|raw}}
+                            <a href="#">{{widget('content', 'copyright_link', {content: 'Privacy Policy', lines: 'all'})|raw}}</a>
+                            {{widget('socialicons', 'socialicons', {'googleplus': 'https://plus.google.com', 'linkedin':'http://www.linkedin.com/', 'facebook': 'https://www.facebook.com', 'twitter': 'https://twitter.com', 'youtube': 'https://www.youtube.com/', 'rss': '#'})|raw}}
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </footer>
+    
+</div>
+
+{% endblock %}
