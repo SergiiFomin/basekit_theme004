@@ -325,10 +325,19 @@ body{
   margin: 0 auto 0px;
   position: relative;
   background: @color-swatch6;
+  .widget.responsiveslideshow .slideshow-image-list {
+    left: 50%;
+    margin-left: -585px !important;
+    width: 1170px;
+  }
   .slideshow-widget{
+    overflow: hidden;
     .slideshow-image{
       width: 100%;
-    }    
+    }
+    .content-wrapper{
+      border: 10px solid rgba(255, 255, 255, 0.27);
+    }
     .btn-prev, 
     .btn-next {
       background-color: @color-swatch7;
@@ -949,7 +958,7 @@ a{
 .divider1,
 .divider2,
 .divider3{
-  background-image:image('/images/template/divider.png');
+  /*background-image:image('/images/template/divider.png');*/
   background-repeat: repeat-y;
 }
 .divider1{
@@ -1069,7 +1078,18 @@ footer{
 ========================================================================*/
 
 /* Narrow desktop */
-@media (max-width: 980px) {}
+@media (max-width: 980px) {
+
+  .widget .navigation ul {
+    font-size: 14px;
+  }
+  .home{
+    div[id$="image-left"] {
+      float: none;
+      margin-right: 0px;
+    }
+  }
+}
 
 /*== Up to 980px and beyond 768px ======================================
 ========================================================================*/
@@ -1082,7 +1102,35 @@ footer{
 ========================================================================*/
 
 /* Landscape phone to portrait tablet */
-@media (max-width: 767px){}
+@media (max-width: 767px){
+
+
+  h2 {
+    font: bold 18px/20px Trebuchet MS,sans-serif;
+  }
+  h1.brand {
+    padding: 0;
+    text-align: center;
+  }
+  .navigation{
+    ul{
+      float: none;
+      margin: 0 auto;
+      display: table;
+      li{
+        a{
+          padding: 20px 10px;
+        }
+      }
+    }
+  }
+  .home{
+    div[id$="image-left"] {
+      float: left;
+      margin-right: 20px;
+    }
+  }
+}
 
 /*== Up to 640px ==================================================
 ====================================================================*/
