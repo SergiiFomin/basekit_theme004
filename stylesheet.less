@@ -852,6 +852,7 @@ a{
   padding: 0px;
   font-size: 1em;
   margin-bottom: 30px;
+  padding-top: 20px;
   a{
     text-decoration: none;
     text-indent: -9999px;
@@ -1060,6 +1061,10 @@ footer{
   }
 }
 
+.bk-zone{
+  min-height: 0;
+}
+
 /*----- media queries ------*/
 
 /*== 1200px and beyond ===================================================
@@ -1087,6 +1092,7 @@ footer{
     div[id$="image-left"] {
       float: none;
       margin-right: 0px;
+      display: inline-block;
     }
   }
 }
@@ -1135,7 +1141,13 @@ footer{
 /*== Up to 640px ==================================================
 ====================================================================*/
 
-@media (max-width: 640px) {}
+@media (max-width: 640px) {
+
+  ul.ma li {
+    display: inline-block;
+    padding: 48px 20px 50px;
+  }
+}
 
 /*== Up to 480px ==================================================
 ====================================================================*/
